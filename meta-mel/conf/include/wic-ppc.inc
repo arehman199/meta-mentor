@@ -6,6 +6,9 @@ IMAGE_BOOT_FILES ?= "${KERNEL_IMAGETYPE} ${UBOOT_BINARY} \
                 ${@' '.join('${KERNEL_IMAGETYPE}-%s' % devicetree for devicetree in KERNEL_DEVICETREE.split())}"
 
 # WIC image type support
+# Uncomment one of these for specific SD card sizes (default=4g)
+# WKS_FILE ?= "sdimage-bootpart-2g.wks"
+# WKS_FILE ?= "sdimage-bootpart-8g.wks"
 WKS_FILE ?= "sdimage-bootpart-4g.wks"
 
 # u-boot is needed for our IMAGE_BOOT_FILES
