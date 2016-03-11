@@ -1,6 +1,3 @@
-# Xvfb is needed for headless remote display setup for cyclone5
-IMAGE_INSTALL_append_cyclone5 = " xserver-xorg-xvfb"
-
 # Install OpenJDK 7 JRE if ENABLE_JAVA is set to "1"
 python () {
     if d.getVar("ENABLE_JAVA", True) == "1":
